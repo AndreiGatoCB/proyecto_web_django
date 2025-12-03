@@ -24,7 +24,8 @@
             Categorías:
             {% for post in posts %}
                 {% for categoria in post.categorias.all %}
-                    {{categoria}} &nbsp;&nbsp;&nbsp;
+                    <a class="link" href="{% url 'categoria' categoria.id %}">
+                    {{categoria.nombre}}</a> &nbsp;&nbsp;&nbsp;
                 {% endfor %}
             {% endfor %}
         </div>
