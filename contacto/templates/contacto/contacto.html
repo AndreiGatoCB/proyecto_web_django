@@ -3,6 +3,11 @@
 {% block title %} Contacto {% endblock %}
 {% block content %}
 
-<div><label style="color: white">{{ miFormulario }}</label></div>
-
+<div class="contenedorFormulario">
+    <form action="" method="post" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: white; margin: 20px auto">{{ miFormulario.as_table }}</table>
+        <input type="submit" value="Enviar" style="width: 150px">
+    </form>
+</div>
 {% endblock %}
