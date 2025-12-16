@@ -6,7 +6,6 @@ from proyecto_web_app import views
 
 urlpatterns = [
     path('', views.home, name="Home"),
-    path('tienda/', views.tienda, name="Tienda"),
 ]
 
 urlpatterns += (static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
