@@ -7,6 +7,7 @@ class Carro:
             carro = self.session["carro"] = {}
         else:
             self.carro = carro
+        self.carro = carro
 
     def agregar(self, producto):
         producto.id = str(producto.id)
@@ -36,7 +37,7 @@ class Carro:
             self.guardar_carro()
 
     def restar_producto(self, producto):
-        for key, value in self.carro.items()
+        for key, value in self.carro.items():
             if key == str(producto.id):
                 value["cantidad"] -= 1
                 if value["cantidad"] == 0:
@@ -47,4 +48,5 @@ class Carro:
     def limpiar_carro(self):
         self.session["carro"] = {}
         self.session.modified = True
+        self.carro = {}
 
