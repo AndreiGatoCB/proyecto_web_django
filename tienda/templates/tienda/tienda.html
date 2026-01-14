@@ -3,7 +3,11 @@
 {% block title %} Tienda {% endblock %}
 {% block content %}
 
+
 <div class="container">
+    <div style="float: right;">
+        <p style="color: white;">Texto de prueba</p>
+    </div>
     <div class="row">
         {% for producto in productos %}
         <div class="col-md-3 col-sm-6 mb-4">
@@ -12,6 +16,9 @@
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{producto.nombre}}</h7>
                     <p class="card-text">$&nbsp;{{producto.precio}}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-success">Agregar al carrito</a>
                 </div>
             </div>
         </div>
