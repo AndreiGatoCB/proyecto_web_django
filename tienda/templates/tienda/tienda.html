@@ -7,19 +7,18 @@
 <div class="container">
     <div style="float: right;">
         {% include "carro/widget.html" %}
-        <p style="color: white;">Total: $&nbsp;{{importe_total_carro}}</p>
     </div>
     <div class="row">
         {% for producto in productos %}
         <div class="col-md-3 col-sm-6 mb-4">
             <div class="card" style="width: 100%">
-                <img src="{{producto.imagen.url}}" class="card-img-top">
+                <img src="{{ producto.imagen.url }}" class="card-img-top">
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{producto.nombre}}</h7>
                     <p class="card-text">$&nbsp;{{producto.precio}}</p>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="{% url 'carro:agregar' producto.id %}}" class="btn btn-success">Agregar al carrito</a>
+                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carrito</a>
                 </div>
             </div>
         </div>
