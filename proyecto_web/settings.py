@@ -49,6 +49,8 @@ INSTALLED_APPS += [
     'tienda',
     'carro',
     'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +146,5 @@ EMAIL_USE_TLS = credentials.EMAIL_USE_TLS
 EMAIL_PORT = credentials.EMAIL_PORT
 EMAIL_HOST_USER = credentials.EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = credentials.EMAIL_HOST_PASSWORD
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
