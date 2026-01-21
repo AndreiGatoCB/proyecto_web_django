@@ -3,6 +3,10 @@
 {% block title %} Autenticación {% endblock %}
 {% block content %}
 
-<div style="color: beige"> Autenticación </div>
+<form method="post" action="" style="color: beige">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-success">Regístrate</button>
+</form>
 
 {% endblock %}
