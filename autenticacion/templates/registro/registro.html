@@ -5,9 +5,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<form method="post" action="">
+<form method="post" action="" class="nav-link text-uppercase text-expanded">
     {% csrf_token %}
-    <div style="width: 75%; margin: auto;">
+    <div style="width: 75%; margin: auto;"  class="nav-link text-uppercase text-expanded">
     {{form|crispy}}
     <button type="submit" class="btn btn-success">Regístrate</button>
     </div>
