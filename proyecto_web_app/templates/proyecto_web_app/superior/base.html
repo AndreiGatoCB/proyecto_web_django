@@ -25,13 +25,13 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
 
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">Ouroboros Carpintería</span>
     </h1>
     <div style="text-align: right; margin-right: 100px; color: beige">
         {% if user.is_authenticated %}
             Hola {{ user.username }} &nbsp; &nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: beige">Cerrar sesión</a>
         {% else %}
-            <a href="#" style="color: beige">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: beige;">Regístrate</a>
+            <a href="{% url 'logear' %}" style="color: beige">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: beige;">Regístrate</a>
         {% endif %}
     </div>
 
@@ -99,7 +99,7 @@
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		</p>
-        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+        <p class="m-0 mbt1">&copy; Ouroboros Carpintería 2026</p>
       </div>
 	</footer>
 
