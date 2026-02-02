@@ -8,6 +8,14 @@
 <form method="post" action="" class="nav-link text-uppercase text-expanded">
     {% csrf_token %}
     <div style="width: 75%; margin: auto;"  class="nav-link text-uppercase text-expanded">
+        {% if messages %}
+            {% for mensaje in messages %}
+                <span class="alert alert-{{mensaje.tags}}">
+                    {{mensaje}}
+                </span>
+            {% endfor %}
+        {% endif %}
+        <br/><br/><br/>
     {{form|crispy}}
     <button type="submit" class="btn btn-success">Login</button>
     </div>
